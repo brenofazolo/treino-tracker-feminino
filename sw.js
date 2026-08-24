@@ -1,5 +1,5 @@
-const CACHE='treino-feminino-prod-v3';
-const ASSETS=['./index.html','./manifest.json','./config-tools.js','./history-tools.js','./workout-input-tools.js','./block-workout-tools.js'];
+const CACHE='treino-feminino-prod-v4';
+const ASSETS=['./index.html','./manifest.json','./config-tools.js','./history-tools.js','./workout-input-tools.js','./version-tools.js','./block-workout-tools.js'];
 
 self.addEventListener('install',event=>{
   event.waitUntil(
@@ -21,6 +21,7 @@ function injectTools(text){
   if(!text.includes('config-tools.js'))text=text.replace('</body>','<script src="./config-tools.js"></script></body>');
   if(!text.includes('history-tools.js'))text=text.replace('</body>','<script src="./history-tools.js"></script></body>');
   if(!text.includes('workout-input-tools.js'))text=text.replace('</body>','<script src="./workout-input-tools.js"></script></body>');
+  if(!text.includes('version-tools.js'))text=text.replace('</body>','<script src="./version-tools.js"></script></body>');
   if(!text.includes('block-workout-tools.js'))text=text.replace('</body>','<script src="./block-workout-tools.js"></script></body>');
   return text;
 }
