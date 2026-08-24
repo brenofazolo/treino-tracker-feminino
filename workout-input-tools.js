@@ -49,7 +49,6 @@
         var item=W[day].items[i];
         if(!item)return;
         var repsDefault=plannedReps(item[1]);
-
         if(prev&&!exEl.querySelector('.previous-session-line')){
           var summary=sessionSummary(prev,i);
           if(summary){
@@ -61,7 +60,6 @@
             if(header)header.insertAdjacentElement('afterend',line);
           }
         }
-
         exEl.querySelectorAll('.setbox').forEach(function(box,j){
           var inputs=box.querySelectorAll('.inputs input');
           if(inputs.length<2)return;
