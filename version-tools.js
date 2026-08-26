@@ -1,6 +1,6 @@
 (function(){
   'use strict';
-  var LATEST_VERSION='1.04';
+  var LATEST_VERSION='1.05';
   var installed=localStorage.getItem('ttf_version')||'1.01';
   window.AVAILABLE_VERSION=LATEST_VERSION;
   window.INSTALLED_VERSION=installed;
